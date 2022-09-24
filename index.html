@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="container">
+            <header id="header">
+                <div id="color-picker">
+                    <input type="color" id="picked-color">
+                    <p id="picked-color-hex" for="picked-color" onchange="newColor()">#000000</p>
+                </div>
+                <select name="mode-picker" id="mode-picker">
+                    <option value="monochrome">Monochrome</option>
+                    <option value="monochrome-dark">Monochrome-Dark</option>
+                    <option value="monochrome-light">Monochrome-Light</option>
+                    <option value="analogic">Analogic</option>
+                    <option value="complement">Complement</option>
+                    <option value="analogic-complement">Analogic-Complement</option>
+                    <option value="triad">Triad</option>
+                    <option value="quad">Quad</option>
+                </select>
+                <button onclick="render()">Get color scheme</button>
+            </header>
+            <div id="color-container">
+                <div id="color-1" class="colors"></div>
+                <div id="color-2" class="colors"></div>
+                <div id="color-3" class="colors"></div>
+                <div id="color-4" class="colors"></div>
+                <div id="color-5" class="colors"></div>
+            </div>
+            <div id="color-name-container">
+                <p id="color-name-1" class="color-names"></p>
+                <p id="color-name-2" class="color-names"></p>
+                <p id="color-name-3" class="color-names"></p>
+                <p id="color-name-4" class="color-names"></p>
+                <p id="color-name-5" class="color-names"></p>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
